@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ring 999</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            scroll-snap-type: y mandatory;
+        }
+
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        .section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+						wdith:100%;
+        }
+
+        .section1 {
+            background-image: url("https://img.freepik.com/free-photo/beautiful-shot-beach-shore-cloudy-sky_181624-33176.jpg");
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            filter: opacity(85%);
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Mulish', sans-serif;
+            font-size: 3.5em;
+            width: auto;
+            margin: auto;
+            padding: 2vh 1vw 2vh 1vw;
+            text-align: center;
+            backdrop-filter: blur(3px);
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 1em;
+            border: solid thick rgba(255,60,75,0.7);
+            color: rgba(255,60,75,0.7);
+        }
+				
+				
+				.text {
+            font-family: 'Mulish', sans-serif;
+            margin: auto;
+            padding: 2vh 1vw 2vh 1vw;
+            text-align: center;
+            background-color: rgba(255,255,255,0.85);
+            border-radius: 1em;
+            border: solid thick rgba(255,60,75,0.85);
+            color: rgba(255,60,75,0.7);
+						width:auto;
+						height:auto;
+				}
+				
+
+        h2 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            width: 100%;
+            margin: 0 15% 0 0;
+            text-align: center;
+        }
+				
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 3%;
+            padding: 1vh 2vw 1vh 2vw;
+            text-align: center;
+            width: 100%;
+            z-index: 2;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            padding: 1% 2% 1% 2%;
+            transition: all 0.5s ease;
+            text-transform: uppercase;
+            background-color: rgba(255, 60, 75, 0.7);
+            border-radius: 50px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.9);
+            color: rgb(255,60,75);
+            font-weight: bold;
+            border-radius: 15px;
+            padding: 10px;
+            transition: all 0.75s ease;
+        }
+
+        .section2 {
+						background-color:blue;
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            top: 100%;
+            left: 0;
+        }
+
+        .section3 {
+						background-color:orange;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+				
+				.section4 {
+            background-color:yellow;
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+						justify-content: center;
+            top: 100%;
+            left: 0;
+        }
+				
+				.section5 {
+            background-color:pink;
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            top: 100%;
+            left: 0;
+        }
+				
+				.section6 {
+            background-color:purple;
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            top: 100%;
+            left: 0;
+        }
+				
+				.section7 {
+            background-image: url("https://img.freepik.com/free-photo/inflatable-boats-life-jackets-migration-crisis-operation_23-2150901808.jpg");
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            top: 100%;
+            left: 0;
+        }
+				
+        .section4 div, .section5 div, .section6 div  {
+				    width:50%;
+						overflow=auto;
+						float:left;
+				}
+				
+				.good  {
+				    background-color: rgba(0,255,0,0.4);
+						border: solid lime 5px;
+						position:relative;
+						height:100%;
+						align-items: center;
+				}
+				
+			  .bad  {
+				    background-color: rgba(255,0,0,0.4);
+						border: solid maroon 5px;
+						position:relative;
+						height:100%;
+						align-items: center;
+				}
+				
+
+    </style>
+</head>
+<body>
+    <div class="container" id="scroll-container">
+        <div class="section section1">
+            <div>
+                <nav id="nav">
+                    <a href="#section1" class="full_nav">Home</a>
+                    <a href="#section2" class="full_nav">Contact</a>
+                    <a href="#section3" class="full_nav">About</a>
+                </nav>
+            </div>
+            <div>
+                <h1>Stay connected.</h1>
+                <h2><em>For safety.</em> For fun. For work.</h2>
+            </div>
+        </div>
+				
+        <div class="section section2">
+				    <div class="text">
+						    <h3>A family is huddling under a cliff,<br>cut off,<br>with no mobile signal,<br>from their beach's exit due to it being high tide.</h3>
+						</div>
+				</div>
+         
+				<div class="section section3">
+				    <div class="text">
+						    <h3>Is the beach working with Ring999?</h3>
+						</div>
+				</div>
+         
+				<div class="section section4">
+				    <div class="good">
+						    <h1>YES</h1>
+								<div class="text">
+										<h3>If a Ring999 emergency phone box is nearby, the family use it to ring the emergency services</h3>
+								</div>
+						</div>
+						<div class="bad">
+						    <h1>NO</h1>
+								<div class="text">
+										<h3>Someone tries to climb cliff to search for signal</h3>
+								</div>
+						</div>
+				</div>
+         
+				<div class="section section5">
+						<div class="good">
+						    <h1>YES</h1>
+								<div class="text">
+										<h5>If an emergency phone box isn't near them, the family scan the nearby QR code<br>which takes them to a specially made website<br>and allows them to use their phone to call the emergency services</h5>
+								</div>
+						</div>
+						<div class="bad">
+						    <h1>NO</h1>
+								<div class="text">
+										<h4>No phone signal found,<br>so family are now completely trapped and tide is rushing in...</h4>
+								</div>
+						</div>
+				</div>
+				
+				<div class="section section6">
+						<div class="good">
+						    <h1>YES</h1>
+								<div class="text">
+										<h3>Even without mobile signal, they are able to contact a 24/7 emergency operator.<br>This call also sends out their exact location from What3Words</h3>
+								</div>
+						</div>
+						<div class="bad">
+						    <h1>NO</h1>
+								<div class="text">
+										<h3>Emergency Operators don't know where they are, or that they need help;<br>so it's likely they won't be rescued</h3>
+								</div>
+						</div>
+				</div>
+         
+				<div class="section section7">
+				</div>
+				
+				
+			
+    </div>
+
+		<script>
+        // Scroll handling for smooth scroll behavior
+        const container = document.getElementById('scroll-container');
+        let isScrolling = false;
+
+        container.addEventListener('wheel', function(event) {
+            event.preventDefault();
+
+            if (isScrolling) return;
+            isScrolling = true;
+
+            const delta = Math.sign(event.deltaY);
+            const targetScrollTop = container.scrollTop + delta * container.clientHeight;
+
+            container.scrollTo({
+                top: targetScrollTop,
+                behavior: 'smooth'
+            });
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000); // Adjust timeout duration if necessary
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!--background-image: url("https://img.freepik.com/free-photo/inflatable-boats-life-jackets-migration-crisis-operation_23-2150901808.jpg");-->
+<!--background-image: url("https://img.freepik.com/free-photo/beautiful-scenery-sea-waves-crashing-rock-formations_181624-17765.jpg");-->
+<!--background-image: url("https://img.freepik.com/free-photo/inflatable-boats-life-jackets-migration-crisis-operation_23-2150901808.jpg");-->

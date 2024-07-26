@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Logs</title>
+    <style>
+		
+		    h1  {
+				text-decoration: underline;
+				}
+				
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+						background-color: rgb(0,130,0);
+        }
+        
+				
+				.projects  {
+				    background-color: rgb(250,250,250);
+				}
+				
+			  .projtext {
+            font-size: 1.5em;
+            text-align: center;
+						padding-top: 150px;
+				}
+				
+				.projects div {
+            flex: 1 1 20%;
+            height: 350px;
+						width:75%;
+						margin-left:12%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+						
+				}
+				
+				
+				.overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+						justify-content: flex-start;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+						margin:0;
+						border:none;
+        }
+						
+						
+				.projects div div .overlay {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 130, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+						border:none;
+						align:center;
+						margin:0;
+	          
+        }
+				
+				.projects div div:hover .overlay {
+            opacity: 1;
+						border: none;
+
+				}
+				
+				.projects div h3 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 7px;
+            border-radius: 50px;
+            margin: 0;
+						z-index:1;
+        }
+				
+				.TR1, .TR2  {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+						padding-bottom: 30px;
+						
+			  }
+				
+			  .projects div div {
+            position: relative;
+            flex: 1 1 40%;
+						margin:20px;
+						
+				}
+				
+    </style>
+</head>
+<body>
+    <h1>Please select your product</h1>
+    <a href="#project" class="button"> <img src="https://cdn.pixabay.com/animation/2023/03/18/14/57/14-57-44-723_512.gif" alt="Arrow" style="width:100px;height:100px; border-radius:25px;"></a>
+		<script>
+        document.querySelector('.button').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
+				
+				
+    </script>
+		<h1>Please select the project which you want to support</h1>
+    <div class="projects">
+		    <div class="TR1" id="project">
+				    <div style="background-image:url(https://img.freepik.com/free-photo/beautiful-playful-river-otter-nature-habitat-czech-republic-lutra-lutra_475641-399.jpg); border: solid black 7px; border-radius:5px;">
+						    <h3>European Beaver Dam Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Suum maritum corde dilexit suo</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/great-egret-ardea-alba_181624-15777.jpg); border: solid black 7px; border-radius:5px;">
+						    <h3>Avocet Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Natos duos creavit. Horum alterum</div>
+								</div>
+            </div>
+				</div>
+				<br>
+				<div class="TR2" id="project">
+				    <div style="background-image:url(https://img.freepik.com/free-photo/closeup-northern-fiscal-sitting-branch-sunlight_181624-19044.jpg); border: solid black 7px; border-radius:5px;">
+						    <h3>Pied Flycatcher Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Sermone lepido, tum autem incessu commodo.</div>
+								</div>
+            </div>
+						<div style="background-image:url(https://img.freepik.com/free-photo/black-flying-foxes-hanging-tree_167946-161.jpg); border: solid black 7px; border-radius:5px;">
+						    <h3>Greater Horseshoe Bat Project</h3>
+								<div class="overlay">
+                    <div class="projtext">Domum servarvit lanam fecit.</div>
+								</div>
+            </div>
+				</div>
+		</div>
+<footer>
+<p>NEED TO ADD CREDIT FOR THE PICS</p>
+</body>
+</html>
